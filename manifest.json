@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "图提取 ImageGrab",
+  "version": "1.0.0",
+  "description": "在淘宝、天猫、京东、拼多多商家版商品详情页提取商品图片，预览勾选后批量下载为 PNG。",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": [
+    "*://*.taobao.com/*",
+    "*://*.tmall.com/*",
+    "*://*.tmall.hk/*",
+    "*://*.alicdn.com/*",
+    "*://*.taobaocdn.com/*",
+    "*://*.tbcdn.cn/*",
+    "*://*.aliyuncs.com/*",
+    "*://*.jd.com/*",
+    "*://*.jd.hk/*",
+    "*://*.360buyimg.com/*",
+    "*://*.pinduoduo.com/*",
+    "*://*.yangkeduo.com/*",
+    "*://*.pddpic.com/*",
+    "*://*.yangkeduo.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.taobao.com/*",
+        "*://*.tmall.com/*",
+        "*://*.tmall.hk/*",
+        "*://*.jd.com/*",
+        "*://*.jd.hk/*",
+        "*://*.pinduoduo.com/*",
+        "*://*.yangkeduo.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+*.crx
+*.pem
+*.zip
+!docs/downloads/imagegrab.zip
+.idea/
+.vscode/
+node_modules/
+dist/
+.cache/

@@ -1,0 +1,53 @@
+#imagegrab-root {
+  all: initial;
+  position: fixed !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  z-index: 2147483646 !important;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif !important;
+}
+
+#imagegrab-root .imagegrab-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 108px;
+  height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 20px;
+  background: #1677ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(22, 119, 255, 0.35);
+}
+
+#imagegrab-root .imagegrab-button:hover {
+  background: #4096ff;
+}
+
+#imagegrab-root .imagegrab-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+#imagegrab-root .imagegrab-toast {
+  position: absolute;
+  right: 0;
+  bottom: 52px;
+  max-width: 260px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+#imagegrab-root[hidden] {
+  display: none !important;
+}
